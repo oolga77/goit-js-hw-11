@@ -1,20 +1,10 @@
 import { Notify } from 'notiflix';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 import { loadMoreBtn } from './js/load-more-btn';
 import { pixabayApiService } from './js/pixabay-api-service';
 import { refs } from './js/refs';
 import { clearGallery, appendToGallery } from './js/render-markup';
+import { lightbox } from './js/lightbox';
 
-
-
-let lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 100,
-  captionType: 'alt',
-  widthRatio: 0.8,
-  heightRatio: 0.9,
-});
 
 refs.formEl.addEventListener('submit', onFormSubmit);
 refs.loadMoreBtn.addEventListener('click', onLoadMoreBtnClick);
